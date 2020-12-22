@@ -10,7 +10,8 @@ VALUES(
 
 if (mysqli_query($conn, $query)) {
     session_start();
-    $res = mysqli_query($conn, "select users.id, users.first_name, users.last_name, users.photo, roles.title from users where first_name = '".$_POST['first_name']."' and last_name = '".$_POST['last_name']."' and password = '".$_POST['password']."';");
+    $query2 = "select users.id, users.first_name, users.last_name, users.photo, roles.title from users where first_name = '".$_POST['first_name']."' and last_name = '".$_POST['last_name']."' and password = '".$_POST['password']."';";
+    $res = mysqli_query($conn, $query2);
     $row = mysqli_fetch_array($res);
     $_SESSION['role'] = $row['role_id'];
     $_SESSION['first_name'] = $row['first_name'];

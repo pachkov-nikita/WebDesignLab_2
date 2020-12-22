@@ -1,33 +1,13 @@
-const password = document.querySelector('#password');
-const confirm_password = document.querySelector('#confirm_password');
-const button = document.querySelector('#btn');
+let password = document.getElementById("pass");
+let confirm_password = document.getElementById("pass_rep");
 
-password.addEventListener('focusout', validationHandler);
-confirm_password.addEventListener('keyup', validationHandler);
-
-function buttonToggler(e) {
-    if (
-        password.value &&
-        confirm_password.value &&
-        password.value === confirm_password.value
-    ) {
-        if (button.classList.contains('disabled')) {
-            button.classList.remove('disabled');
-        }
+function confirmPassword(){
+    if(password.value != confirm_password.value) {
+        confirm_password.setCustomValidity('Passwords do not match');
     } else {
-        if (!button.classList.contains('disabled')) {
-            button.classList.add('disabled');
-        }
+        confirm_password.setCustomValidity('');
     }
 }
 
-function validationHandler(e) {
-    if (password.value != confirm_password.value) {
-        confirm_password.classList.remove('valid');
-        confirm_password.classList.add('invalid');
-    } else {
-        confirm_password.classList.remove('invalid');
-        confirm_password.classList.add('valid');
-    }
-    buttonToggler();
-}
+password.onchange = confirmPassword;
+confirm_password.onkeyup = confirmPassword;

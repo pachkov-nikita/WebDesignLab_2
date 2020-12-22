@@ -30,35 +30,39 @@ require_once('../user1.php');
     </div>
 </div>
 
-
-<table class="container centered " style="margin-top: 150px;">
-    <thead class="purple darken-2">
-    <tr>
-        <th>Photo</th>
-        <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Role</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    <?php
+<?php
+    echo "<table class='container centered ' style='margin-top: 150px;'>";
+    echo "<thead class='purple darken-2'>";
+    echo "<tr>";
+    echo " <th>Photo</th>";
+    echo "<th>#</th>";
+    echo "    <th>First Name</th>";
+    echo "    <th>Last Name</th>";
+    echo "    <th>Role</th>";
+    echo "</tr>";
+    echo "</thead>";
+    echo "<tbody>";
     require_once "../db.php";
 
-    $res = mysqli_query($conn, "select users.id, users.first_name, users.last_name, users.photo, roles.title from users join roles on users.role_id = roles.id where users.id =".$_GET['user'].";");
-    $row = mysqli_fetch_all($res, MYSQLI_ASSOC);
-    for($i = 0; $i < count($row); $i++){
-        echo "<tr >";
-        echo "<td><img src='" .$row[$i]['photo']. "' alt='Photo' class='rectangle' width='200' height='100'></td>";
-        echo "<td>" .$row[$i]['id']. "</td>";
-        echo "<td>" . $row[$i]['first_name'] . "</td>";
-        echo "<td>" . $row[$i]['last_name'] . "</td>";
-        echo "<td>" . $row[$i]['title'] . "</td>";
-        echo "</tr>";
-    }
-    mysqli_close($conn);
+        $res = mysqli_query($conn, "select users.id, users.first_name, users.last_name, users.photo, roles.title from users join roles on users.role_id = roles.id where users.id =".$_GET['user'].";");
+        $row = mysqli_fetch_all($res, MYSQLI_ASSOC);
+        for($i = 0; $i < count($row); $i++){
+            echo "<tr >";
+            echo "<td><img src='" .$row[$i]['photo']. "' alt='Photo' class='rectangle' width='200' height='100'></td>";
+            echo "<td>" .$row[$i]['id']. "</td>";
+            echo "<td>" . $row[$i]['first_name'] . "</td>";
+            echo "<td>" . $row[$i]['last_name'] . "</td>";
+            echo "<td>" . $row[$i]['title'] . "</td>";
+            echo "</tr>";
+        }
+        mysqli_close($conn);
+
+
+      echo" </tbody>";
+    echo "</table>";
+
     ?>
+
     </tbody>
 </table>
 
