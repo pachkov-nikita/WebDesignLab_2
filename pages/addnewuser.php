@@ -28,7 +28,7 @@
 
 
     <div class="container row" style=" margin-top: 80px;" >
-        <form action="../service/addUser.php" method="POST" style="border: 2px black  ; padding: 30px;">
+        <form action="../service/addnewuser.php" method="POST" style="border: 2px black  ; padding: 30px;">
                 <div class="form-group">
                     <input type="text" class="form-control" name="first_name" placeholder="First Name" required>
                 <span class="helper-text" data-error="Что-то неправильно!" data-success="right"></span>

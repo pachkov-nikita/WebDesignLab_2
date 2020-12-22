@@ -31,7 +31,7 @@
     require_once('../Table.php');
     ?>
         <div class="row" style="margin-top: 50px;">
-            <a href="./adduser.php" class="btn purple darken-2 col s4 offset-s4">Add User</a>
+            <a href="addnewuser.php" class="btn purple darken-2 col s4 offset-s4">Add User</a>
         </div>
 
 </body>

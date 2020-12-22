@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.js"></script>
     <script src='../assets/js/confirmPassword.js'></script>
-    <script src ="../assets/js/login.js"></script>
-
     <title>Edit</title>
 </head>
 <body>
@@ -23,7 +21,7 @@ echo "<nav class='purple darken-2'>";
 echo "<div class='container nav-wrapper'>";
 echo "<a href='../main.php' class='brand-logo'>Logo</a>";
 echo "<ul id='nav-mobile' class='right hide-on-med-and-down'>";
-echo "<li><a href='../service/LogOut.php'>Sign Out</a></li>";
+echo  "<button type='button' class='btn purple darken-2 ' id='SignUp' onClick=document.location='../service/exit.php'>Log Out</button> ";
 echo "</ul>";
 echo "</div>";
 echo "</nav>";
@@ -35,7 +33,7 @@ echo "<div class='col s3 offset-s1 '>";
 echo "<img src='".$row['photo']."' alt='Photo' class='rectangle' width='120' height='150'/>";
 
 echo "<form action='../service/upload.php' method='POST' enctype='multipart/form-data'>";
-echo "<div class='file-field input-field'>";
+echo "<div class='file-field '>";
 echo "<div class='btn purple darken-2'>";
 echo "<span>File</span>";
 echo "<input type='file' name='fileToUpload' id='fileToUpload'>";
@@ -48,6 +46,8 @@ echo "<input type='submit' value='Upload Image' class='btn purple darken-2 col s
 echo "</form>";
 echo "</div>";
 echo "<form action='../service/edit.php' method='POST' class='col s4 offset-s3 ' style='border: 1px solid purple; padding: 30px;'>";
+echo  "<div>";
+echo "</div>";
 echo  "<div>";
 
 echo"<input type='text'class='form-control' name='first_name' placeholder='First Name' required>";
@@ -82,4 +82,3 @@ mysqli_close($conn);
 
 </body>
 </html>
-

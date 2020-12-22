@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.js"></script>
     <script src='../assets/js/confirmPassword.js'></script>
-    <script src ="../assets/js/login.js"></script>
-
     <title>Edit</title>
 </head>
 <body>
@@ -23,7 +21,7 @@ echo "<nav class='purple darken-2'>";
 echo "<div class='container nav-wrapper'>";
 echo "<a href='../main.php' class='brand-logo'>Logo</a>";
 echo "<ul id='nav-mobile' class='right hide-on-med-and-down'>";
-echo "<li><a href='../service/LogOut.php'>Sign Out</a></li>";
+echo "<li><a href='../service/exit.php'>Sign Out</a></li>";
 echo "</ul>";
 echo "</div>";
 echo "</nav>";

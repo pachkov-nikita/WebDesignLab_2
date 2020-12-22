@@ -2,7 +2,7 @@
 session_start();
 require_once '../db.php';
 	if (count($_POST)>0) {
-        $res = mysqli_query($conn, "select users.id, users.first_name, users.role_id from users where last_name = '".$_POST['last_name']."' and password = '".$_POST['password']."';");
+        $res = mysqli_query($conn, "select users.id, users.first_name, users.role_id from users where login = '".$_POST['login']."' and password = '".$_POST['password']."';");
         $row = mysqli_fetch_array($res);
 
 		if (is_array($row)){
