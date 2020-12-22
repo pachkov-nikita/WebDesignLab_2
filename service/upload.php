@@ -40,7 +40,7 @@ if ($uploadOk == 0) {
 
 session_start();
 require_once '../db.php';
-$query = "UPDATE users SET photo = '$target_file' WHERE id = '".$_SESSION['id']."';";;
+$query = "update users set photo = '$target_file' where id = '".$_SESSION['id']."';";
 
 
 if (mysqli_query($conn, $query)) {

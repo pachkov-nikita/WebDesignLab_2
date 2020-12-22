@@ -1,4 +1,4 @@
-<table class="container centered striped" style="margin-top: 150px;">
+<table class="container centered striped" style="margin-top: 100px;">
     <thead class="purple darken-2">
 
     <tr>

@@ -9,17 +9,15 @@
     <title>Main</title>
 </head>
 <body>
-
     <nav class="purple darken-2">
         <div class="container nav-wrapper">
         <a href="/" class="brand-logo">Logo</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a class="modal-trigger" href="#modal1">Sign In</a></li>
-            <li><a href="./SignUp.php">Sign Up</a></li>
+            <button type="button" class="btn modal-trigger purple darken-2" href="#modal1" id="signIn" onClick="login()">Sign In</button>
+            <button type="button" class="btn purple darken-2 " id="SignUp" onClick="document.location='../pages/registration.php'">Sign Up</button
         </ul>
         </div>
     </nav>
-
             <div id="modal1" class="modal">
                 <div class="modal-content">
                         <form action="../service/auth.php" method="POST" class="" style="">

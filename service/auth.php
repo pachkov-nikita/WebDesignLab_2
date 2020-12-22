@@ -12,7 +12,7 @@ require_once '../db.php';
             mysqli_close($conn);
             header('Location: ../main.php');
 } else {
-    echo 'Invalid password';
+    echo 'Ошибка в данных!!!';
     mysqli_close($conn);
    }
 }

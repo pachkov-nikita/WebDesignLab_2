@@ -12,15 +12,17 @@
 
 <nav class="purple darken-2">
         <div class="container nav-wrapper">
-        <a href="/" class="brand-logo">Logo</a>
+        <a href="../main.php" class="brand-logo">Logo</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="./edit.php">
                     <?php
                     session_start();
+                    echo "<button id='btn' type='submit' class='btn purple darken-2 col s4 offset-s9' >";
                     echo $_SESSION['first_name'];
+                    echo "</button>";
                     ?>
             </a></li>
-            <li><a href="../service/LogOut.php">Sign Out</a></li>
+            <button type="button" class="btn purple darken-2 " id="SignUp" onClick="document.location='../service/LogOut.php'">Log Out</button
         </ul>
         </div>
     </nav>

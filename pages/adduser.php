@@ -6,28 +6,29 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.js"></script>
     <script src="../assets/js/confirmPassword.js"></script>
-    <title>Sign Up</title>
+    <title>Add User</title>
 </head>
 <body>
-
 <nav class="purple darken-2">
-        <div class="container nav-wrapper">
-        <a href="/" class="brand-logo">Logo</a>
+    <div class="container nav-wrapper">
+        <a href="../main.php" class="brand-logo">Logo</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="./edit.php">
-            <?php
-                session_start();
-                echo $_SESSION['first_name'];
-            ?>
-            </a></li>
-            <li><a href="../service/LogOut.php">Sign Out</a></li>
+                    <?php
+                    session_start();
+                    echo "<button id='btn' type='submit' class='btn purple darken-2 col s4 offset-s9' >";
+                    echo $_SESSION['first_name'];
+                    echo "</button>";
+                    ?>
+                </a></li>
+            <button type="button" class="btn purple darken-2 " id="SignUp" onClick="document.location='../service/LogOut.php'">Log Out</button>
         </ul>
-        </div>
-    </nav>
+    </div>
+</nav>
 
 
     <div class="container row" style=" margin-top: 80px;" >
-        <form action="../service/addUser.php" method="POST" style="border: 2px black purple ; padding: 30px;">
+        <form action="../service/addUser.php" method="POST" style="border: 2px black  ; padding: 30px;">
                 <div class="form-group">
                     <input type="text" class="form-control" name="first_name" placeholder="First Name" required>
                 <span class="helper-text" data-error="Что-то неправильно!" data-success="right"></span>
@@ -48,17 +49,17 @@
                 </div>
 
             <div class="form-group">
-                    <input id="password" type="password" class="validate" for="password" placeholder="Password" required>
+                    <input id="password" type="password" class="validate" name="password" placeholder="Password" required>
                     <span class="helper-text" data-error="Минимальное количество символов 6" data-success="Correct"></span>
             </div>
 
 
             <div class="form-group">
-                <input id="password" type="password" class="validate" for="confirm_password" placeholder="Confirm Password" required>
+                <input id="password" type="password" class="validate" name="confirm_password" placeholder="Confirm Password" required>
                 <span class="helper-text" data-error="Минимальное количество символов 6" data-success="Correct"></span>
             </div>
 
-            <button id="btn" type="submit" class="button">Add</button>
+            <button id="btn" type="submit" class="btn purple darken-2 col s4 offset-s4">Add User</button>
         </form>
     </div>
 
