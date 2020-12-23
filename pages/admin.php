@@ -22,7 +22,7 @@
                     echo "</button>";
                     ?>
             </a></li>
-            <button type="button" class="btn purple darken-2 " id="SignUp" onClick="document.location='../service/LogOut.php'">Log Out</button
+            <button type="button" class="btn purple darken-2 " id="SignUp" onClick="document.location='../service/exit.php'">Log Out</button
         </ul>
         </div>
     </nav>

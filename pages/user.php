@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.js"></script>
 
-    <title>Home page</title>
+    <title>User</title>
 </head>
 <body>
 

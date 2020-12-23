@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="../assets/js/confirmPassword.js"></script>
     <title>Registration</title>
 </head>
 <body>
@@ -22,7 +21,7 @@
 </nav>
 
 <div class="container row" style=" margin-top: 80px;" >
-    <form action="../service/addnewuser.php" method="POST" style="border: 2px black ; padding: 30px;">
+    <form action="../service/registration.php" method="POST" style="border: 2px black ; padding: 30px;">
 
         <div class="form-group">
             <input type="text" class="validate" name="login" placeholder="login" required>
@@ -63,6 +62,6 @@
 
     </form>
 </div>
-
+<script src="../assets/js/confirmPassword.js"></script>
 </body>
 </html>

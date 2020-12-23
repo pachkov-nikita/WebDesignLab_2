@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.js"></script>
-
     <title>Main</title>
 </head>
 <body>
@@ -22,7 +21,7 @@
             echo "</button>";
             ?>
             </a></li>
-            <button type="button" class="btn purple darken-2 " id="SignUp" onClick="document.location='../service/LogOut.php'">Log Out</button>
+            <button type="button" class="btn purple darken-2 " id="SignUp" onClick="document.location='../service/exit.php'">Log Out</button>
         </ul>
         </div>
     </nav>

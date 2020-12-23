@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.js"></script>
-    <script src='../assets/js/confirmPassword.js'></script>
     <title>Edit</title>
 </head>
 <body>
@@ -36,40 +35,36 @@ echo "<form action='../service/upload.php' method='POST' enctype='multipart/form
 echo "<div class='file-field '>";
 echo "<div class='btn purple darken-2'>";
 echo "<span>File</span>";
-echo "<input type='file' name='fileToUpload' id='fileToUpload'>";
+    echo "<input type='file' name='fileToUpload' id='fileToUpload'>";
 echo "</div>";
-echo "<div class='file-path-wrapper'>";
-echo "<input class='file-path validate' >";
+    echo "<div class='file-path-wrapper'>";
+    echo "<input class='file-path validate' >";
 echo "</div>";
 echo "</div>";
-echo "<input type='submit' value='Upload Image' class='btn purple darken-2 col s10 offset-s4' name='submit'>";
+    echo "<input type='submit' value='Upload Image' class='btn purple darken-2 col s10 offset-s4' name='submit'>";
 echo "</form>";
 echo "</div>";
-echo "<form action='../service/edit.php' method='POST' class='col s4 offset-s3 ' style='border: 1px solid purple; padding: 30px;'>";
+    echo "<form action='../service/edit.php' method='POST' class='col s4 offset-s3 ' style='border: 1px solid purple; padding: 30px;'>";
 echo  "<div>";
 echo "</div>";
-echo  "<div>";
 
-echo"<input type='text'class='form-control' name='first_name' placeholder='First Name' required>";
-echo "<span class='helper-text' data-error='Что-то неправильно!' data-success='right'></span>";
+echo  "<div>";
+    echo"<input type='text'class='form-control' name='first_name' placeholder='First Name' required>";
+    echo "<span class='helper-text' data-error='Что-то неправильно!' data-success='right'></span>";
 echo "</div>";
 echo "<div class='form-group'>";
-echo "<input type='text' class='form-control' name='last_name' placeholder='Last Name' required>";
-echo "<span class='helper-text' data-error='Что-то неправильно!' data-success='right'></span>";
+    echo "<input type='text' class='form-control' name='last_name' placeholder='Last Name' required>";
+    echo "<span class='helper-text' data-error='Что-то неправильно!' data-success='right'></span>";
 echo "</div>";
 echo "<div class='form-group'>";
-echo   "<input id='password' type='password' class='validate' for='password' placeholder='Password'required'>";
-echo   "<span class='helper-text' data-error='Минимальное количество символов 6' data-success='Correct'></span>";
+    echo   "<input type='password' class='validate'  name='password' minlength='6'  placeholder='Password'required>";
+    echo "<label for='password' ></label>";
+    echo   "<span class='helper-text' data-error='Минимальное количество символов 6' data-success='Correct'></span>";
 echo "</div>";
-echo "<div class='form-group'>";
-echo  "<input id='password' type='password' class='validate' for='confirm_password' placeholder='Confirm Password' required>";
-echo   " <span class='helper-text' data-error='Минимальное количество символов 6' data-success='Correct'></span>";
-echo "</div>";
+
 
 echo   "<select class='browser-default' name='role'>";
-echo "<option value='2' disabled selected>Role</option>";
-echo  "<option value='1'>Admin</option>";
-echo "<option value='2''>User</option>";
+    echo "<option selected value='1'>Admin</option>";
 echo" </select>";
 
 echo "<button id='btn' type='submit' class='btn purple darken-2 col s4 offset-s4'>Edit</button>";
