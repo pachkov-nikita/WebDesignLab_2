@@ -28,7 +28,7 @@
     </nav>
 
     <?php
-    require_once('../Table.php');
+    require_once('../table.php');
     ?>
         <div class="row" style="margin-top: 50px;">
             <a href="addnewuser.php" class="btn purple darken-2 col s4 offset-s4">Add User</a>

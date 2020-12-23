@@ -56,7 +56,7 @@ echo "</div>";
 echo "<div class='form-group'>";
     echo   "<input type='password' class='validate'  name='password' minlength='6'  placeholder='Password'required>";
     echo "<label for='password' ></label>";
-    echo   "<span class='helper-text' data-error='Минимальное количество символов 6' data-success='Correct'></span>";
+    echo   "<span class='helper-text' data-error='Минимальное количество символов 6' data-success='right'></span>";
 echo "</div>";
 
 
