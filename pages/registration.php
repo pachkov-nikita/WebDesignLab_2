@@ -48,13 +48,11 @@
         <div class="row">
             <div class="form-group">
                 <input id="password" type="password" class="validate" minlength="6" name="password" required placeholder="Password">
-                <label for="password" ></label>
                 <span class="helper-text" data-error="Не менее 6 символов!" ></span>
             </div>
         </div>
         <div class="form-group">
                 <input id="confirm_password" type="password" class="validate" minlength="6" required placeholder="Confirm Password">
-                <label for="confirm_password" ></label>
                 <span class="helper-text" data-error="Не менее 6 символов!" ></span>
             </div>
         </div>

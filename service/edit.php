@@ -9,3 +9,4 @@ if (mysqli_query($conn, "update users set first_name = '".$_POST['first_name']."
     echo "Ошибка!!!";
     mysqli_close($conn);
 }
+

@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.js"></script>
-    <script src="../assets/js/confirmPassword.js"></script>
     <title>Add New User</title>
 </head>
 <body>
@@ -30,7 +29,7 @@
     <div class="container row" style=" margin-top: 80px;" >
         <form action="../service/addnewuser.php" method="POST" style="border: 2px black  ; padding: 30px;">
             <div class="form-group">
-                <input type="text" class="validate" name="login" placeholder="login" required>
+                <input type="text" class="form-control" name="login" placeholder="login" required>
                 <span class="helper-text" data-error="Что-то неправильно!" data-success="right"></span>
             </div>
                 <div class="form-group">
@@ -68,4 +67,5 @@
     </div>
 
 </body>
+<script src="../assets/js/confirmPassword.js"></script>
 </html>

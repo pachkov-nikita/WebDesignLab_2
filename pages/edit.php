@@ -58,7 +58,6 @@ echo "<div class='form-group'>";
 echo "</div>";
 echo "<div class='form-group'>";
     echo   "<input type='password' class='validate'  name='password' minlength='6'  placeholder='Password'required>";
-    echo "<label for='password' ></label>";
     echo   "<span class='helper-text' data-error='Минимальное количество символов 6' data-success='right'></span>";
 echo "</div>";
 
@@ -68,7 +67,7 @@ echo   "<select class='browser-default' name='role'>";
 echo" </select>";
 
 echo "<button id='btn' type='submit' class='btn purple darken-2 col s4 offset-s4'>Edit</button>";
-echo "<button id='del_btn' type='submit' class='btn red col s4 offset-s4' >delete</button>";
+echo  "<button type='btn' class='btn red col s4 offset-s4 ' id='SignUp' onClick=document.location='../service/delete.php'>Delete</button> ";
 echo "</form>";
 echo "</div>";
 mysqli_close($conn);

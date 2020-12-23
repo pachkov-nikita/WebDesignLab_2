@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.js"></script>
-
     <title>User</title>
 </head>
 <body>
@@ -32,8 +31,8 @@ require_once('../user1.php');
         for($i = 0; $i < count($row); $i++){
             echo "<tr >";
             echo "<td><img src='" .$row[$i]['photo']. "' alt='Photo' class='rectangle' width='200' height='100'></td>";
-            echo "<td>" .$row[$i]['login']. "</td>";
             echo "<td>" .$row[$i]['id']. "</td>";
+            echo "<td>" .$row[$i]['login']. "</td>";
             echo "<td>" . $row[$i]['first_name'] . "</td>";
             echo "<td>" . $row[$i]['last_name'] . "</td>";
             echo "<td>" . $row[$i]['title'] . "</td>";
